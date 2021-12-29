@@ -9,12 +9,12 @@ CORS(app)
 
 @app.route("/")
 async def index(request):
-    return response.text("/api")
+    return response.redirect("/api")
 
 
 @app.route("/api")
 async def api(request):
-    now = datetime.datetime.now() + datetime.timedelta(minutes=5+18, seconds=10)
+    now = datetime.datetime.now() + datetime.timedelta(hours=1)
     time = Scheduler().get_period_info(now)
     return response.json(time.json())
 

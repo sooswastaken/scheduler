@@ -48,11 +48,11 @@ document.getElementById("timer").innerHTML = `
   </svg>
   <span id="base-timer-label" class="base-timer__label">${"?"}
   </span>
-  <p id="current_period">Second Period</p>
+  <p id="current_period">?</p>
 </div>
 `;
 
-fetch('http://192.168.1.212:8000/api')
+fetch('https://period-api.soosbot.com/api')
   .then(response => response.json())
   .then(data => {
     document.getElementById("current_period").innerHTML = (
@@ -69,7 +69,7 @@ fetch('http://192.168.1.212:8000/api')
 
 function onTimesUp() {
   clearInterval(timerInterval);
-  fetch('http://192.168.1.212:8000/api')
+  fetch('https://period-api.soosbot.com/api')
   .then(response => response.json())
   .then(data => {
     document.getElementById("current_period").innerHTML = (

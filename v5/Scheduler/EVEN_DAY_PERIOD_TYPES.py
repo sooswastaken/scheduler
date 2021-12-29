@@ -61,6 +61,6 @@ class EVEN_DAY_PERIOD_TYPES(enum.Enum):
     }
     AFTER_SCHOOL = {
         "type": PeriodTypes.AFTER_SCHOOL,
-        "end": datetime.time(0),
-        "previous": PeriodTypes.AFTER_SCHOOL,
+        "end": datetime.time(23, 59, 59, 59),
+        "previous": PeriodTypes.EIGHTH_PERIOD,
     }

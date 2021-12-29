@@ -51,6 +51,6 @@ class ODD_DAY_PERIOD_TYPES(enum.Enum):
     }
     AFTER_SCHOOL = {
         "type": PeriodTypes.AFTER_SCHOOL,
-        "end": datetime.time(0),
+        "end": datetime.time(23, 59, 59, 999999),
         "previous": PeriodTypes.SEVENTH_PERIOD,
     }

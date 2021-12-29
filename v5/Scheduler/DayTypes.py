@@ -1,0 +1,10 @@
+import enum
+
+
+class DayTypes(enum.Enum):
+    # Type of day it is. EVEN_DAY, ODD_DAY, WEEKEND, HOLIDAY, TWO_HOUR_EARLY_RELEASE
+    EVEN_DAY = "EVEN_DAY"
+    ODD_DAY = "ODD_DAY"
+    WEEKEND = "WEEKEND"
+    HOLIDAY = "HOLIDAY"
+    TWO_HOUR_EARLY_RELEASE = "TWO_HOUR_EARLY_RELEASE"
